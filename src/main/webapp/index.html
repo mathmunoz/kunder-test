@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Test</title>
+	</head>
+	<body>
+		<h1>..:: TEST KUNDER ::..</h1>
+		
+		<div>
+			<form th:object="word" th:action="@{/word}" method="post">
+				<legend> PALABRA  </legend>
+				<label>Ingresar palabra de 4 letras:</label>
+				<input type="text" maxlength="4" name="data" th:field="*{data}"/>
+				
+				<button type="submit">Convertir a Mayuscula</button>
+				
+			</form>
+		</div>
+		
+		 
+		<div>
+			<form th:action="@{/time}" method="get">
+				<legend> HORA  </legend>
+				<label>Ingresar una hora:</label>
+				<input type="number" name="value" th:field="*{time}"/>
+				
+				<button type="submit">Convertir</button>
+			</form>
+		</div>
+		<!--
+		<table>
+			<tr>
+				<td th:text="${hora}">hora</td>
+			</tr>
+		</table>
+		-->
+		
+	</body>
+</html>
